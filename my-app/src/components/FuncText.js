@@ -1,9 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useContext} from 'react';
+import TextContext from '../context/TextContext';
 
 function FuncText(props) {
 
     const [selected, setSelected] = useState(props.select);
-    const text = props.text;
+    const context = useContext(TextContext);
+    const text = context.myText;
 
     let displayText = "";
 

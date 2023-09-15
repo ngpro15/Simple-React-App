@@ -1,5 +1,6 @@
-import React from "react";
-import FuncText from "./FuncText"
+import React, { useContext } from "react";
+import FuncText from "./FuncText";
+import TextContext from "../context/TextContext";
 import Box from '@mui/material/Box';
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -8,9 +9,11 @@ export default function Home() {
 
     const [text, setText] = React.useState('');
     const [btn, setBtn] = React.useState('');
+    const context = useContext(TextContext);
 
     const handleChange = (event) => {
         setText(event.target.value);
+        context.update(event.target.value);
     }
 
     const dispCount = (event) => {
