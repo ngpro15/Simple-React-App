@@ -1,9 +1,14 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
-export default function About() {
+export default function About(props) {
     return (
         <div>
-            This is About Page
+            This is {props.title} Page
         </div>
     )
+}
+
+About.propTypes = {
+    title: PropTypes.string
 }

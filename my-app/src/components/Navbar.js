@@ -26,7 +26,7 @@ function Navbar() {
             <CssBaseline />
             <Toolbar>
                 <Typography variant="h4" className={classes.logo}>
-                    Text Modifier
+                    Text Analyzer
                 </Typography>
                 <div className={classes.navLinks}>
                     <Link to="/" className={classes.link}>
